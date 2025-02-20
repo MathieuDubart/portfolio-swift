@@ -11,21 +11,23 @@ struct ProjectSheetView: View {
     let project: Project
     
     var body: some View {
-        VStack {
-            AsyncImage(url: URL(string: project.picturesUrl[0])) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 190, height: 300)
-                    .clipped()
-            } placeholder: {
-                ProgressView()
-            }
+        VStack(alignment: .leading) {
+            Text(project.title.uppercased())
+                .modifier(PortfolioTitle())
+                
             
-            Text(project.title)
             Text(project.date)
-            Text(project.description)
+                .foregroundColor(.secondary)
+                .modifier(PortfolioDateCaption())
             
+            Spacer()
+                .frame(height: 20)
+
+            Text(project.description)
+                        
+            Spacer()
+                .frame(height: 20)
+
             Button {} label: {
                 HStack {
                     Text("View project")

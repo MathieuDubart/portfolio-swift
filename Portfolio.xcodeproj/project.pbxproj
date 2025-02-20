@@ -18,7 +18,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DBC609E62D677A47009228E2 /* Exceptions for "Portfolio" folder in "Portfolio" target */ = {
+		DB0EA80B2D67E167009B3B6C /* Exceptions for "Portfolio" folder in "Portfolio" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -31,7 +31,7 @@
 		DBC609D62D6779ED009228E2 /* Portfolio */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DBC609E62D677A47009228E2 /* Exceptions for "Portfolio" folder in "Portfolio" target */,
+				DB0EA80B2D67E167009B3B6C /* Exceptions for "Portfolio" folder in "Portfolio" target */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
