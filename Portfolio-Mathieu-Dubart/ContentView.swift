@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
     @StateObject private var viewModel = ProjectsListViewModel()
@@ -26,7 +27,14 @@ struct ContentView: View {
                         
                     }
                     .navigationDestination(for: Project.self) { project in
-                        Text(project.title)
+                        if let videoUrl = project.downloadedVideoUrl {
+                            SingleVideoPlayer(videoURL: videoUrl, controller: VideoPlayerController())
+                                .frame(height: 300)
+                                .cornerRadius(10)
+                        } else {
+                            Text("Chargement de la vidéo...")
+                                .foregroundColor(.gray)
+                        }
                     }
             }
             .navigationDestination(for: Project.self) { project in
