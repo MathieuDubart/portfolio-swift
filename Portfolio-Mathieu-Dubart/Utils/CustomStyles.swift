@@ -35,11 +35,9 @@ struct PortfolioButton: ButtonStyle {
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
             .frame(minWidth: 80, minHeight: 25)
-            .background(Color.white)
+            .background(Color.secondary)
             .font(.headline)
+            .foregroundStyle(Color.white)
             .cornerRadius(12)
-            .shadow(color: Color(red: 0.35, green: 0.03, blue: 0.12), radius: 0, x: 0, y: configuration.isPressed ? 0 : 5)
-            .offset(y: configuration.isPressed ? 5 : 0)
-            .animation(.spring(response: 0, dampingFraction: 0.5, blendDuration: 0.1), value: configuration.isPressed)
     }
 }

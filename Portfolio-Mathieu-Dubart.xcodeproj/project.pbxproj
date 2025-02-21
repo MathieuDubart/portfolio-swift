@@ -7,63 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB9B36762D67A29E0050EAF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB9B36752D67A29E0050EAF6 /* GoogleService-Info.plist */; };
-		DBC609E92D677B34009228E2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBC609E82D677B34009228E2 /* FirebaseFirestore */; };
-		DBC609ED2D677D3C009228E2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DBC609EC2D677D3C009228E2 /* FirebaseStorage */; };
+		DBA21A392D68B0970026A6EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBA21A382D68B0970026A6EF /* FirebaseFirestore */; };
+		DBA21A3B2D68B0F10026A6EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA21A3A2D68B0F10026A6EF /* GoogleService-Info.plist */; };
+		DBE6AB672D68E0F60090636E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DBE6AB662D68E0F60090636E /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB9B36752D67A29E0050EAF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DBC609D42D6779ED009228E2 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA21A102D68B0350026A6EF /* Portfolio-Mathieu-Dubart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Portfolio-Mathieu-Dubart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA21A3A2D68B0F10026A6EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DB0EA80B2D67E167009B3B6C /* Exceptions for "Portfolio" folder in "Portfolio" target */ = {
+		DBA21A3D2D68BE4F0026A6EF /* Exceptions for "Portfolio-Mathieu-Dubart" folder in "Portfolio-Mathieu-Dubart" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = DBC609D32D6779ED009228E2 /* Portfolio */;
+			target = DBA21A0F2D68B0350026A6EF /* Portfolio-Mathieu-Dubart */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DBC609D62D6779ED009228E2 /* Portfolio */ = {
+		DBA21A122D68B0350026A6EF /* Portfolio-Mathieu-Dubart */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DB0EA80B2D67E167009B3B6C /* Exceptions for "Portfolio" folder in "Portfolio" target */,
+				DBA21A3D2D68BE4F0026A6EF /* Exceptions for "Portfolio-Mathieu-Dubart" folder in "Portfolio-Mathieu-Dubart" target */,
 			);
-			path = Portfolio;
+			path = "Portfolio-Mathieu-Dubart";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DBC609D12D6779ED009228E2 /* Frameworks */ = {
+		DBA21A0D2D68B0350026A6EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC609E92D677B34009228E2 /* FirebaseFirestore in Frameworks */,
-				DBC609ED2D677D3C009228E2 /* FirebaseStorage in Frameworks */,
+				DBA21A392D68B0970026A6EF /* FirebaseFirestore in Frameworks */,
+				DBE6AB672D68E0F60090636E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DBC609CB2D6779ED009228E2 = {
+		DBA21A072D68B0350026A6EF = {
 			isa = PBXGroup;
 			children = (
-				DB9B36752D67A29E0050EAF6 /* GoogleService-Info.plist */,
-				DBC609D62D6779ED009228E2 /* Portfolio */,
-				DBC609D52D6779ED009228E2 /* Products */,
+				DBA21A122D68B0350026A6EF /* Portfolio-Mathieu-Dubart */,
+				DBA21A112D68B0350026A6EF /* Products */,
+				DBA21A3A2D68B0F10026A6EF /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
-		DBC609D52D6779ED009228E2 /* Products */ = {
+		DBA21A112D68B0350026A6EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBC609D42D6779ED009228E2 /* Portfolio.app */,
+				DBA21A102D68B0350026A6EF /* Portfolio-Mathieu-Dubart.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,80 +71,80 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBC609D32D6779ED009228E2 /* Portfolio */ = {
+		DBA21A0F2D68B0350026A6EF /* Portfolio-Mathieu-Dubart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC609E22D6779EE009228E2 /* Build configuration list for PBXNativeTarget "Portfolio" */;
+			buildConfigurationList = DBA21A1E2D68B0360026A6EF /* Build configuration list for PBXNativeTarget "Portfolio-Mathieu-Dubart" */;
 			buildPhases = (
-				DBC609D02D6779ED009228E2 /* Sources */,
-				DBC609D12D6779ED009228E2 /* Frameworks */,
-				DBC609D22D6779ED009228E2 /* Resources */,
+				DBA21A0C2D68B0350026A6EF /* Sources */,
+				DBA21A0D2D68B0350026A6EF /* Frameworks */,
+				DBA21A0E2D68B0350026A6EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DBC609D62D6779ED009228E2 /* Portfolio */,
+				DBA21A122D68B0350026A6EF /* Portfolio-Mathieu-Dubart */,
 			);
-			name = Portfolio;
+			name = "Portfolio-Mathieu-Dubart";
 			packageProductDependencies = (
-				DBC609E82D677B34009228E2 /* FirebaseFirestore */,
-				DBC609EC2D677D3C009228E2 /* FirebaseStorage */,
+				DBA21A382D68B0970026A6EF /* FirebaseFirestore */,
+				DBE6AB662D68E0F60090636E /* FirebaseStorage */,
 			);
-			productName = Portfolio;
-			productReference = DBC609D42D6779ED009228E2 /* Portfolio.app */;
+			productName = "Portfolio-Mathieu-Dubart";
+			productReference = DBA21A102D68B0350026A6EF /* Portfolio-Mathieu-Dubart.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DBC609CC2D6779ED009228E2 /* Project object */ = {
+		DBA21A082D68B0350026A6EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					DBC609D32D6779ED009228E2 = {
+					DBA21A0F2D68B0350026A6EF = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = DBC609CF2D6779ED009228E2 /* Build configuration list for PBXProject "Portfolio" */;
+			buildConfigurationList = DBA21A0B2D68B0350026A6EF /* Build configuration list for PBXProject "Portfolio-Mathieu-Dubart" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DBC609CB2D6779ED009228E2;
+			mainGroup = DBA21A072D68B0350026A6EF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DBC609E72D677B34009228E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DBA21A372D68B0970026A6EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = DBC609D52D6779ED009228E2 /* Products */;
+			productRefGroup = DBA21A112D68B0350026A6EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBC609D32D6779ED009228E2 /* Portfolio */,
+				DBA21A0F2D68B0350026A6EF /* Portfolio-Mathieu-Dubart */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DBC609D22D6779ED009228E2 /* Resources */ = {
+		DBA21A0E2D68B0350026A6EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9B36762D67A29E0050EAF6 /* GoogleService-Info.plist in Resources */,
+				DBA21A3B2D68B0F10026A6EF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DBC609D02D6779ED009228E2 /* Sources */ = {
+		DBA21A0C2D68B0350026A6EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -154,7 +154,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		DBC609E02D6779EE009228E2 /* Debug */ = {
+		DBA21A1C2D68B0360026A6EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +217,7 @@
 			};
 			name = Debug;
 		};
-		DBC609E12D6779EE009228E2 /* Release */ = {
+		DBA21A1D2D68B0360026A6EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,18 +273,19 @@
 			};
 			name = Release;
 		};
-		DBC609E32D6779EE009228E2 /* Debug */ = {
+		DBA21A1F2D68B0360026A6EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Portfolio/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Portfolio-Mathieu-Dubart/Preview Content\"";
 				DEVELOPMENT_TEAM = LK2358MPL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Portfolio/Info.plist;
+				INFOPLIST_FILE = "Portfolio-Mathieu-Dubart/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -294,8 +295,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.Portfolio";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.Portfolio-Mathieu-Dubart";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -303,18 +304,19 @@
 			};
 			name = Debug;
 		};
-		DBC609E42D6779EE009228E2 /* Release */ = {
+		DBA21A202D68B0360026A6EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Portfolio/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Portfolio-Mathieu-Dubart/Preview Content\"";
 				DEVELOPMENT_TEAM = LK2358MPL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Portfolio/Info.plist;
+				INFOPLIST_FILE = "Portfolio-Mathieu-Dubart/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,8 +326,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.Portfolio";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.Portfolio-Mathieu-Dubart";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,20 +338,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBC609CF2D6779ED009228E2 /* Build configuration list for PBXProject "Portfolio" */ = {
+		DBA21A0B2D68B0350026A6EF /* Build configuration list for PBXProject "Portfolio-Mathieu-Dubart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBC609E02D6779EE009228E2 /* Debug */,
-				DBC609E12D6779EE009228E2 /* Release */,
+				DBA21A1C2D68B0360026A6EF /* Debug */,
+				DBA21A1D2D68B0360026A6EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC609E22D6779EE009228E2 /* Build configuration list for PBXNativeTarget "Portfolio" */ = {
+		DBA21A1E2D68B0360026A6EF /* Build configuration list for PBXNativeTarget "Portfolio-Mathieu-Dubart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBC609E32D6779EE009228E2 /* Debug */,
-				DBC609E42D6779EE009228E2 /* Release */,
+				DBA21A1F2D68B0360026A6EF /* Debug */,
+				DBA21A202D68B0360026A6EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -357,7 +359,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DBC609E72D677B34009228E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		DBA21A372D68B0970026A6EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -368,17 +370,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DBC609E82D677B34009228E2 /* FirebaseFirestore */ = {
+		DBA21A382D68B0970026A6EF /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DBC609E72D677B34009228E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = DBA21A372D68B0970026A6EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		DBC609EC2D677D3C009228E2 /* FirebaseStorage */ = {
+		DBE6AB662D68E0F60090636E /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DBC609E72D677B34009228E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = DBA21A372D68B0970026A6EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = DBC609CC2D6779ED009228E2 /* Project object */;
+	rootObject = DBA21A082D68B0350026A6EF /* Project object */;
 }

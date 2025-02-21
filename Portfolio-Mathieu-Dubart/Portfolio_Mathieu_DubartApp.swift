@@ -1,8 +1,8 @@
 //
-//  PortfolioApp.swift
-//  Portfolio
+//  Portfolio_Mathieu_DubartApp.swift
+//  Portfolio-Mathieu-Dubart
 //
-//  Created by Mathieu Dubart on 20/02/2025.
+//  Created by Mathieu Dubart on 21/02/2025.
 //
 
 import SwiftUI
