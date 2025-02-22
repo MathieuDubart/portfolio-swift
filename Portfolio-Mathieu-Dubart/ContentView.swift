@@ -22,7 +22,7 @@ struct ContentView: View {
                     }
                     
                     Tab("About me", systemImage: "person.fill") {
-                        Text("About Me")
+                        AboutMeView()
                     }
                 }
             } else {
@@ -30,12 +30,16 @@ struct ContentView: View {
                     Image(colorScheme == .light ? "logo_day" : "logo_night")
                         .modifier(PortfolioLargeTitle())
                     
-                    Text(viewModel.welcomeText)
+                    Text("Welcome!")
                         .modifier(PortfolioLargeTitle())
-                        .animation(.easeInOut, value: viewModel.welcomeText)
+                    
+                    Text("Loading...")
+                        .modifier(PortfolioDateCaption())
+                        .opacity(viewModel.loadingOpacity)
+                        .animation(.easeInOut, value: viewModel.loadingOpacity)
                         .task {
-                            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                                viewModel.welcomeText = "Loading..."
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
+                                viewModel.loadingOpacity = 1
                             }
                         }
                 }

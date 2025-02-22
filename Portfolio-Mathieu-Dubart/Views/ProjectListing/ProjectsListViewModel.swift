@@ -15,7 +15,7 @@ class ProjectsListViewModel: ObservableObject {
     @Published var navigationPath = NavigationPath()
     
     @Published var entitiesAreLoaded = false
-    @Published var welcomeText = "Welcome!"
+    @Published var loadingOpacity: Double = 0
     
     init() {}
     

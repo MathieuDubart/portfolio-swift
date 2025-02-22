@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
             VStack(alignment: .leading) {
-                Text("Portfolio.")
+                Text("Portfolio")
                     .modifier(PortfolioLargeTitle())
                 GridView()
                     .navigationDestination(for: Project.self) { project in
