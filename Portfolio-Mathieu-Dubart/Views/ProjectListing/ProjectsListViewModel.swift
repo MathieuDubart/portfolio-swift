@@ -14,6 +14,9 @@ class ProjectsListViewModel: ObservableObject {
     @Published var selectedProject: Project?
     @Published var navigationPath = NavigationPath()
     
+    @Published var entitiesAreLoaded = false
+    @Published var welcomeText = "Welcome!"
+    
     init() {}
     
     @MainActor
@@ -42,13 +45,14 @@ class ProjectsListViewModel: ObservableObject {
         }
         
         self.projects = fetchedProjects
+        entitiesAreLoaded = true
     }
     
     func goToProject(_ project: Project) {
         DispatchQueue.main.async {
-            self.selectedProject = nil // Ferme la Sheet proprement
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { // Délai pour éviter les conflits UI
-                self.navigationPath.append(project) // Ajoute le projet dans la navigation
+            self.selectedProject = nil
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.navigationPath.append(project)
             }
         }
     }

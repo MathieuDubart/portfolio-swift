@@ -20,7 +20,6 @@ struct ProjectSheetView: View {
                 
                 
                 Text(project.date)
-                    .foregroundColor(.secondary)
                     .modifier(PortfolioDateCaption())
                 
                 Spacer()

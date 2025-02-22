@@ -10,51 +10,45 @@ import AVKit
 
 struct ContentView: View {
     @StateObject private var viewModel = ProjectsListViewModel()
-    @State private var navigateToProject: Project? = nil
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        NavigationStack(path: $viewModel.navigationPath) {
-            VStack(alignment: .leading) {
-                Text("Portfolio.")
-                    .modifier(PortfolioLargeTitle())
-                GridView()
-                    .environmentObject(viewModel)
-                    .onAppear {
-                        Task {
-                            await viewModel.fetchProjects()
-                            viewModel.projects.forEach { print("Project id: \($0.id)") }
-                        }
-                        
+        ZStack {
+            if viewModel.entitiesAreLoaded {
+                TabView {
+                    Tab("Projects", systemImage: "hammer") {
+                        HomeView()
+                            .environmentObject(viewModel)
                     }
-                    .navigationDestination(for: Project.self) { project in
-                        if let videoUrl = project.downloadedVideoUrl {
-                            SingleVideoPlayer(videoURL: videoUrl, controller: VideoPlayerController())
-                                .frame(height: 300)
-                                .cornerRadius(10)
-                        } else {
-                            Text("Chargement de la vidéo...")
-                                .foregroundColor(.gray)
-                        }
+                    
+                    Tab("About me", systemImage: "person.fill") {
+                        Text("About Me")
                     }
-            }
-            .navigationDestination(for: Project.self) { project in
-                Text(project.title)
-            }
-            .padding(.horizontal, 12)
-        }
-        .sheet(item: $viewModel.selectedProject) { project in
-            ProjectSheetView(project: project)
-                .environmentObject(viewModel)
-                .presentationDetents([.medium, .fraction(0.5)])
-                .presentationDragIndicator(.visible)
-        }
-        .onChange(of: navigateToProject) { _, newProject in
-            if newProject != nil {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    viewModel.selectedProject = nil // Ferme la Sheet proprement
+                }
+            } else {
+                VStack {
+                    Image(colorScheme == .light ? "logo_day" : "logo_night")
+                        .modifier(PortfolioLargeTitle())
+                    
+                    Text(viewModel.welcomeText)
+                        .modifier(PortfolioLargeTitle())
+                        .animation(.easeInOut, value: viewModel.welcomeText)
+                        .task {
+                            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+                                viewModel.welcomeText = "Loading..."
+                            }
+                        }
+                }
+                .onAppear {
+                    Task {
+                        await viewModel.fetchProjects()
+                        viewModel.projects.forEach { print("Project id: \($0.id)") }
+                    }
+                    
                 }
             }
         }
+        .animation(.easeInOut, value: viewModel.entitiesAreLoaded)
     }
 }
 
