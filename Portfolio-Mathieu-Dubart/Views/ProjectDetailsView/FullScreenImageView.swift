@@ -8,47 +8,25 @@
 import SwiftUI
 
 struct FullScreenImageView: View {
-    let url: URL
+    let image: Image
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            GeometryReader { geo in
-                Color.black
-                    .ignoresSafeArea()
+        VStack {
+            ZStack(alignment: .topTrailing) {
+                Color.black.ignoresSafeArea()
                 
-                AsyncImage(url: url) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color.black)
-                            .foregroundStyle(Color.white)
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geo.size.width, height: geo.size.height)
-                            .background(Color.black)
-                            .ignoresSafeArea()
-                    case .failure:
-                        Image(systemName: "exclamationmark.triangle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(.white)
-                    @unknown default:
-                        Color.black
-                            .ignoresSafeArea()
-                    }
-                }
-                
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
                 Button {
                     dismiss()
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.white)
                         .font(.largeTitle)
+                        .foregroundColor(.white)
                         .padding()
                 }
             }
@@ -56,7 +34,6 @@ struct FullScreenImageView: View {
     }
 }
 
-
 #Preview {
-    FullScreenImageView(url: URL(string:"test")!)
+    FullScreenImageView(image: Image(systemName: "pencil"))
 }

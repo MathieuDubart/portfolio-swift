@@ -10,7 +10,7 @@ import SwiftUI
 struct ProjectDetailsView: View {
     var project: Project
     var body: some View {
-        GeometryReader { geometry in
+        ScrollView{
             VStack(alignment: .leading) {
                 Text(project.title)
                     .modifier(PortfolioTitle())
@@ -32,7 +32,7 @@ struct ProjectDetailsView: View {
                 } else {
                     VideoComponent(videoUrl: project.downloadedVideoUrl)
                 }
-                    
+                
             }
         }
         .padding(12)

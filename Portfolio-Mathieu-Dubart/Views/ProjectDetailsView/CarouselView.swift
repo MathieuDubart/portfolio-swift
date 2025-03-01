@@ -10,9 +10,7 @@ import SwiftUI
 struct CarouselView: View {
     var imagesUrl: [URL?]
     @State private var currentIndex = 0
-    @State private var selectedImageURL: URL? = nil
-    @State private var isFullScreenPresented = false
-    let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+    @State private var reloadTrigger = UUID()
     
     var body: some View {
         VStack {
@@ -20,30 +18,31 @@ struct CarouselView: View {
                 ForEach(Array(imagesUrl.enumerated()), id: \.offset) { index, url in
                     Group {
                         if let url = url {
-                            AsyncImage(url: url) { phase in
+                            AsyncImage(url: url)
+                            { phase in
                                 switch phase {
                                 case .empty:
                                     ProgressView()
                                         .frame(width: 170, height: 270)
                                         .clipShape(RoundedRectangle(cornerRadius: 25))
                                 case .success(let image):
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 170, height: 270)
-                                        .clipped()
-                                        .clipShape(RoundedRectangle(cornerRadius: 25))
-                                        .onTapGesture {
-                                            selectedImageURL = url
-                                            isFullScreenPresented = true
-                                        }
+                                    CarouselImage(image: image)
                                 case .failure:
-                                    Image(systemName: "exclamationmark.triangle")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 50, height: 50)
+                                    VStack {
+                                        Image(systemName: "exclamationmark.triangle")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 50, height: 50)
+                                        
+                                        Text("Tap to reload")
+                                    }
+                                    .onTapGesture {
+                                        reloadTrigger = UUID()
+                                    }
+                                    
                                 @unknown default:
                                     EmptyView()
+                                    //
                                 }
                             }
                         } else {
@@ -53,17 +52,12 @@ struct CarouselView: View {
                         }
                     }
                     .tag(index)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 12)
+                    .id(reloadTrigger)
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .frame(height: 300)
-            .padding(.horizontal, 50)
-            .onReceive(timer) { _ in
-                withAnimation {
-                    currentIndex = (currentIndex + 1) % imagesUrl.count
-                }
-            }
+            .frame(height: 330)
             
             HStack(spacing: 8) {
                 ForEach(0..<imagesUrl.count, id: \.self) { index in
@@ -73,11 +67,6 @@ struct CarouselView: View {
                 }
             }
             .padding(.top, 10)
-        }
-        .fullScreenCover(isPresented: $isFullScreenPresented) {
-            if let url = selectedImageURL {
-                FullScreenImageView(url: url)
-            }
         }
     }
 }

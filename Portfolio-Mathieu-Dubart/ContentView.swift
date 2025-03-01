@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVKit
 
 struct ContentView: View {
     @StateObject private var viewModel = ProjectsListViewModel()
@@ -30,18 +29,7 @@ struct ContentView: View {
                     Image(colorScheme == .light ? "logo_day" : "logo_night")
                         .modifier(PortfolioLargeTitle())
                     
-                    Text("Welcome!")
-                        .modifier(PortfolioLargeTitle())
-                    
-                    Text("Loading...")
-                        .modifier(PortfolioDateCaption())
-                        .opacity(viewModel.loadingOpacity)
-                        .animation(.easeInOut, value: viewModel.loadingOpacity)
-                        .task {
-                            DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
-                                viewModel.loadingOpacity = 1
-                            }
-                        }
+                    LoadingAnimationView()
                 }
                 .onAppear {
                     Task {
